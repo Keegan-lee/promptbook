@@ -250,14 +250,16 @@ Run every check. Fix what is mechanical (a length, a missing hub link) once, and
 
 ### Step 7 — Images
 
-1. Read the brand pack's imagery rules every run.
-2. New posts: make one cover with {{IMAGE_TOOL | none}} in the house style, at {{COVER_SIZE | 1200x630}}. No text on the image unless the brief allows it. No real people, logos, or likenesses you have no right to use. Follow the ticket's image brief.
-   - A post about a named place gets art of that place: a landmark a reader would recognise, or the place's real shape. Never a generic motif, and never an invented landmark. If a reader could swap the place for another and not notice, the image has failed.
-   - Look at every image before you upload it.
-3. Alt text: one plain sentence saying what the image shows.
-4. Upload it to the CMS's assets in the same dataset and set the cover and its alt (and any thumbnail or social image the field map has). Some CMS connectors cannot upload files: then upload through the CMS's asset API from a script (a desktop task when the file is local), check the returned asset id (content-addressed ids can be checked against the file's hash), and reference it. If the create rejects a reference to a just-uploaded asset on referential integrity, a weak reference is allowed for images (Sanity: `_weak: true`).
-5. No tool, or the tool fails: leave the cover empty and add `needs cover` to Agent Notes. A missing cover never blocks a draft.
-6. Refresh and Correction: keep the existing cover.
+Follow `promptbook/blog/IMAGES.md` (owner 2026-10-28). Summary:
+
+1. Read the brand pack's imagery rules and `IMAGES.md` every run.
+2. New posts **must** have a Sanity `cover` (3:2 master + hotspot + alt) and **at least one** in-body `figureImage` before Draft Ready. OG/Twitter are site-generated — do not upload a separate social file. Caps: opening max 1 figure; dossier brief 1–2 / explainer 2–4; ceiling 5 in-body.
+3. Stock order: Wikimedia → Unsplash (`UNSPLASH_ACCESS_KEY`). Pexels paused. Then Sanity AI only for places/ruins/objects when stock misses; photorealistic and faithful to the named place; no on-asset AI disclosure; spare credits.
+4. Alt: one plain sentence. Set credit fields; `needsAttribution` only when the license requires it.
+5. Upload bytes to Sanity assets in the same dataset. Weak image refs allowed if needed (`_weak: true`).
+6. Missing cover or zero in-body images **blocks** Draft Ready (do not stamp Draft Ready with only `needs cover`).
+7. Ancient Civilizations (and any post about a real site): add a `locationMap` with cited coordinates when the site is central.
+8. Refresh and Correction: keep the existing cover unless the ticket asks to replace it.
 
 ### Step 8 — Create the draft
 
