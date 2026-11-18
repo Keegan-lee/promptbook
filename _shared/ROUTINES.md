@@ -100,6 +100,7 @@ Prefix routines by system so they sort together and read clearly in a digest:
 | Content OS        | `CP ·` | `CP · Copy Writer`         |
 | Blog              | `BL ·` | `BL · Content Gap Scan`    |
 | SPINE             | `CS ·` | `CS · SPINE Sync`          |
+| Task Tracker      | `PM ·` | `PM · Board Review`        |
 | Feature Awareness | `FA ·` | `FA · Evidence Refresh`    |
 | Accounting        | `AC ·` | `AC · Monthly Close Prep`  |
 | Reporting         | `RP ·` | `RP · Metrics Pulse`       |

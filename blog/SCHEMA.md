@@ -295,7 +295,7 @@ If the Content OS kit is installed, its nightly CMS inventory sync creates one C
 
 ## Existing task table alternative
 
-Use this when blog tickets must live in a task table the team already runs. The routines are written for the dedicated table; at build, apply this mapping to every routine prompt and record it in the brief.
+Use this when blog tickets must live in a task table the team already runs, for example one built with the [Task Tracker kit](../task-tracker/SCHEMA.md). With that kit the usual mapping is Proposed → Raw, Ready → Todo, Writing → In Progress, Draft Ready → QA, Live → Done (written by the writer only after it reads that a person published the post), Blocked → Blocked, Rejected and Parked → Won't Do; and its Dedupe Key field can hold `kw:<primary keyword>` beside the description line. The routines are written for the dedicated table; at build, apply this mapping to every routine prompt and record it in the brief.
 
 | Dedicated table                      | Existing task table                                                                                                                                                                                                                                                                                                                                         |
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
